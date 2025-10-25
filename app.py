@@ -1,8 +1,8 @@
 
 
-import streamlit as st
-from model import predict_disease
-import requests
+import streamlit as st  #type: ignore
+from model import predict_disease   #type: ignore
+import requests   #type: ignore
 import os
 
 # Custom CSS for a beautiful, agri-themed UI
