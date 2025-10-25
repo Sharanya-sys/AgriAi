@@ -1,5 +1,5 @@
-#def predict_disease(img_path):
-   #   return "Prototype Diagnosis: Upload a clear image for AI analysis. (TensorFlow not loaded)"
+def predict_disease(img_path):
+     return "Prototype Diagnosis: Upload a clear image for AI analysis. (TensorFlow not loaded)"
 
 
 import tensorflow as tf  
