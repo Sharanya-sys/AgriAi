@@ -1,4 +1,5 @@
-
+import sys
+sys.path.insert(0,'.')
 
 import streamlit as st  
 from model import predict_disease   
