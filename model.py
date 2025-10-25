@@ -1,4 +1,4 @@
-import tensorflow as tf   
+#import tensorflow as tf   
 def predict_disease(img_path):
       return "Basic Diagnosis: Check for visible spots; consult expert."
 from tensorflow.keras.preprocessing import image   
