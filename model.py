@@ -10,7 +10,7 @@ def predict_disease(img_path):
 #from tensorflow.keras.preprocessing import image   
 import numpy as np  
 
-model = tf.keras.applications.MobileNetV2(weights='imagenet')
+#model = tf.keras.applications.MobileNetV2(weights='imagenet')
 
 def predict_disease(img_path):
         try:
