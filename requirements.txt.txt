@@ -2,5 +2,7 @@ streamlit
 tensorflow
 pillow
 requests
-predict
+predict_disease
+
 numpy_disease
+
