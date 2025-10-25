@@ -1,6 +1,6 @@
-import tensorflow as tf   #type: ignore
-from tensorflow.keras.preprocessing import image   #type: ignore
-import numpy as np   #type: ignore
+import tensorflow as tf   
+from tensorflow.keras.preprocessing import image   
+import numpy as np  
 
 model = tf.keras.applications.MobileNetV2(weights='imagenet')
 
