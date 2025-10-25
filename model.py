@@ -1,6 +1,8 @@
-#import tensorflow as tf   
+import tensorflow as tf  
 def predict_disease(img_path):
-      return "Basic Diagnosis: Check for visible spots; consult expert."
+      return "Prototype Diagnosis: Upload a clear image for AI analysis. (TensorFlow not loaded)"
+#def predict_disease(img_path):
+  #    return "Basic Diagnosis: Check for visible spots; consult expert."
 from tensorflow.keras.preprocessing import image   
 import numpy as np  
 
