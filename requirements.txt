@@ -1,6 +1,7 @@
 streamlit
-tensorflow
+
 pillow
 requests
 numpy
+
 predict_disease
