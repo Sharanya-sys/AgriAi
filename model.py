@@ -20,7 +20,7 @@ else:
     # Load images
     train_gen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
     train_data = train_gen.flow_from_directory(
-        r"D:\archive",
+        r"./archive",
         target_size=(224, 224),
         batch_size=32,
         class_mode='categorical',
