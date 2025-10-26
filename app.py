@@ -168,9 +168,9 @@ if uploaded_file is not None:
                 weather = data['weather'][0]['description'].capitalize()
                 temp = data['main']['temp']
                 humidity = data['main']['humidity']
-                st.info(f"🌤 Weather in {city}: {weather}, {temp}°C, Humidity: {humidity}%")
+                st.info(f" Weather in {city}: {weather}, {temp}°C, Humidity: {humidity}%")
         except:
-            st.warning("⚠ Unable to fetch weather details right now.")
+            st.warning(" Unable to fetch weather details right now.")
 
 st.write("---")
 
@@ -211,6 +211,6 @@ st.markdown("""
 <div class="footer">
 Built with  using Python, TensorFlow & Streamlit<br>
  <b>Contact:</b> thantrysharanya@gmail.com<br>
-© 2025 AgriAI - Smart Farming Companion
+ 2025 AgriAI - Smart Farming Companion
 </div>
 """, unsafe_allow_html=True)
