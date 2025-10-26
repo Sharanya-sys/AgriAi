@@ -53,13 +53,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Header
-st.title("🌾 AgriAI: Crop Disease Detector")
-st.markdown("### Empowering Farmers with Artificial Intelligence for a Healthier Harvest 🌿")
+st.title(" AgriAI: Crop Disease Detector")
+st.markdown("### Empowering Farmers with Artificial Intelligence for a Healthier Harvest ")
 st.markdown("Upload a clear crop photo, and let AgriAI detect diseases, suggest treatments, and provide prevention tips in seconds! 🚜")
 st.write("---")
 
 # Sidebar Tips
-st.sidebar.title("🌱 AgriAI Tips")
+st.sidebar.title(" AgriAI Tips")
 st.sidebar.markdown("☘ For Best Results:")
 st.sidebar.markdown("- Upload clear, well-lit photos of crops.")
 st.sidebar.markdown("- Focus on diseased leaves or fruits.")
@@ -130,7 +130,7 @@ if uploaded_file is not None:
             }
         }
 
-        st.success(f"✅ AI Diagnosis: {advice}")
+        st.success(f" AI Diagnosis: {advice}")
 
         # Match recommendation to disease
         disease = None
@@ -141,17 +141,17 @@ if uploaded_file is not None:
 
         if disease:
             rec = recommendations[disease]
-            st.markdown("### 🌿 Recommendations Based on Result")
+            st.markdown("###  Recommendations Based on Result")
             st.markdown(f"""
                             *Treatment:* {rec['Treatment']}  
                              *Prevention:* {rec['Prevention']}  
                              *Organic Tip:* {rec['Organic Tip']}
                              """)
         else:
-            st.info("🌱 Monitor your crops regularly for early signs of infection.")
+            st.info(" Monitor your crops regularly for early signs of infection.")
 
         # Farmer Health Tracker
-        st.markdown("### 📊 Recent Diagnoses Tracker")
+        st.markdown("###  Recent Diagnoses Tracker")
         if 'history' not in st.session_state:
             st.session_state.history = []
         st.session_state.history.append(advice)
@@ -175,7 +175,7 @@ if uploaded_file is not None:
 st.write("---")
 
 # Do's and Don’ts Section
-st.subheader("✅ Do’s and ❌ Don’ts for Sustainable Farming")
+st.subheader(" Do’s and  Don’ts for Sustainable Farming")
 col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
@@ -203,14 +203,14 @@ st.write("---")
 # Footer
 st.markdown("""
 <div style='text-align:center; font-size:20px; font-weight:bold; color:#2e7d32; margin-top:30px;'>
-🌾 Together, let's help farmers achieve a greener and healthier future 🌿
+ Together, let's help farmers achieve a greener and healthier future 
 </div>
 """, unsafe_allow_html=True)
 
 st.markdown("""
 <div class="footer">
-Built with ❤ using Python, TensorFlow & Streamlit<br>
-📧 <b>Contact:</b> thantrysharanya@gmail.com<br>
+Built with  using Python, TensorFlow & Streamlit<br>
+ <b>Contact:</b> thantrysharanya@gmail.com<br>
 © 2025 AgriAI - Smart Farming Companion
 </div>
 """, unsafe_allow_html=True)
