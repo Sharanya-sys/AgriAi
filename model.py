@@ -1,16 +1,11 @@
+
+import tensorflow as tf # type: ignore
 def predict_disease(img_path):
-     return "Prototype Diagnosis: Upload a clear image for AI analysis. (TensorFlow not loaded)"
+      return "Basic Diagnosis: Check for visible spots; consult expert."
+from tensorflow.keras.preprocessing import image # type: ignore
+import numpy as np # type: ignore
 
-
-#import tensorflow as tf  
-def predict_disease(img_path):
-      return "Prototype Diagnosis: Upload a clear image for AI analysis. (TensorFlow not loaded)"
-#def predict_disease(img_path):
-  #    return "Basic Diagnosis: Check for visible spots; consult expert."
-#from tensorflow.keras.preprocessing import image   
-import numpy as np  
-
-#model = tf.keras.applications.MobileNetV2(weights='imagenet')
+model = tf.keras.applications.MobileNetV2(weights='imagenet')
 
 def predict_disease(img_path):
         try:
@@ -40,7 +35,8 @@ def predict_disease(img_path):
 }
 
             
-            
+            #advice =disease_map.get(top_class, 'Healthy plant')
+            #return advice
             advice = disease_map.get(top_class, 'Unknown Disease - Consult a local agricultural expert for accurate diagnosis.')
             return advice
         
