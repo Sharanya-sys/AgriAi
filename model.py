@@ -9,7 +9,8 @@ from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.optimizers import Adam # type: ignore
 
 #  Dataset Path 
-dataset_path = r"C:\Users\shara\Downloads\plantpic_kaggle.zip" #  update to your dataset path
+
+dataset_path = r"C:\Users\shara\OneDrive\Documents\PlantVillage\plantpic_kaggle" #  update to your dataset path
 model_file = "plant_model.h5"
 
 #  Load / Train Model 
@@ -19,7 +20,7 @@ else:
     # Load images
     train_gen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
     train_data = train_gen.flow_from_directory(
-        "./plantpic_kaggle.zip",
+        "./plantpic_kaggle",
         target_size=(224, 224),
         batch_size=32,
         class_mode='categorical',
