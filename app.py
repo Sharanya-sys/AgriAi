@@ -60,25 +60,25 @@ st.write("---")
 
 # Sidebar Tips
 st.sidebar.title(" AgriAI Tips")
-st.sidebar.markdown("☘ For Best Results:")
+st.sidebar.markdown(" For Best Results:")
 st.sidebar.markdown("- Upload clear, well-lit photos of crops.")
 st.sidebar.markdown("- Focus on diseased leaves or fruits.")
 st.sidebar.markdown("- Check weather alerts for prevention.")
 st.sidebar.markdown("---")
-st.sidebar.markdown("☘ ABOUT: AI-powered tool for farmers to detect diseases quickly.")
+st.sidebar.markdown(" ABOUT: AI-powered tool for farmers to detect diseases quickly.")
 
 # File Upload Section
-uploaded_file = st.file_uploader("📸 Upload your crop image (JPG/PNG)...", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader(" Upload your crop image (JPG/PNG)...", type=["jpg", "jpeg", "png"])
 
 # Prediction and Recommendations
 if uploaded_file is not None:
     col1, col2 = st.columns([1, 1])
 
     with col1:
-        st.image(uploaded_file, caption="📷 Uploaded Image", use_column_width=True)
+        st.image(uploaded_file, caption=" Uploaded Image", use_column_width=True)
 
     with col2:
-        with st.spinner("🔍 Analyzing your crop... please wait..."):
+        with st.spinner(" Analyzing your crop... please wait..."):
             advice = predict_disease(uploaded_file)
 
         # Disease-based Recommendations
