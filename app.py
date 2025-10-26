@@ -54,7 +54,7 @@ st.markdown("""
 
 # Header
 st.title(" AgriAI: Crop Disease Detector")
-st.markdown("### Empowering Farmers with Artificial Intelligence for a Healthier Harvest ")
+st.markdown(" Empowering Farmers with Artificial Intelligence for a Healthier Harvest ")
 st.markdown("Upload a clear crop photo, and let AgriAI detect diseases, suggest treatments, and provide prevention tips in seconds! ")
 st.write("---")
 
@@ -141,7 +141,7 @@ if uploaded_file is not None:
 
         if disease:
             rec = recommendations[disease]
-            st.markdown("###  Recommendations Based on Result")
+            st.markdown("  Recommendations Based on Result")
             st.markdown(f"""
                             *Treatment:* {rec['Treatment']}  
                              *Prevention:* {rec['Prevention']}  
@@ -151,7 +151,7 @@ if uploaded_file is not None:
             st.info(" Monitor your crops regularly for early signs of infection.")
 
         # Farmer Health Tracker
-        st.markdown("###  Recent Diagnoses Tracker")
+        st.markdown("  Recent Diagnoses Tracker")
         if 'history' not in st.session_state:
             st.session_state.history = []
         st.session_state.history.append(advice)
