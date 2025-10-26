@@ -55,7 +55,7 @@ st.markdown("""
 # Header
 st.title(" AgriAI: Crop Disease Detector")
 st.markdown("### Empowering Farmers with Artificial Intelligence for a Healthier Harvest ")
-st.markdown("Upload a clear crop photo, and let AgriAI detect diseases, suggest treatments, and provide prevention tips in seconds! 🚜")
+st.markdown("Upload a clear crop photo, and let AgriAI detect diseases, suggest treatments, and provide prevention tips in seconds! ")
 st.write("---")
 
 # Sidebar Tips
@@ -180,21 +180,21 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
     <div class="dos">
-    ✅ Regularly check leaves and soil condition.<br>
-    ✅ Use organic compost and biofertilizers.<br>
-    ✅ Water early in the morning.<br>
-    ✅ Practice crop rotation.<br>
-    ✅ Keep your garden tools clean.
+    * Regularly check leaves and soil condition.<br>
+    * Use organic compost and biofertilizers.<br>
+    * Water early in the morning.<br>
+    * Practice crop rotation.<br>
+    * Keep your garden tools clean.
     </div>
     """, unsafe_allow_html=True)
 with col2:
     st.markdown("""
     <div class="donts">
-    ❌ Don’t use chemical sprays unnecessarily.<br>
-    ❌ Avoid stagnant water around crops.<br>
-    ❌ Don’t mix diseased plants with healthy ones.<br>
-    ❌ Don’t overwater plants.<br>
-    ❌ Don’t ignore early yellow or brown leaf spots.
+    * Don’t use chemical sprays unnecessarily.<br>
+    * Avoid stagnant water around crops.<br>
+    * Don’t mix diseased plants with healthy ones.<br>
+    * Don’t overwater plants.<br>
+    * Don’t ignore early yellow or brown leaf spots.
     </div>
     """, unsafe_allow_html=True)
 
