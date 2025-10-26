@@ -1,8 +1,8 @@
 
 import sys
 sys.path.insert(0,'.')
-import streamlit as st #type ignore
-from model import predict_disease# type ignore
+import streamlit as st 
+from model import predict_disease
 import requests
 
 # Custom Styling
