@@ -1,6 +1,6 @@
 
 import sys
-sys.path.insert(0,'.')
+sys.path.insert(0,'./src')
 import streamlit as st 
 from model import predict_disease
 import requests
