@@ -60,7 +60,7 @@ if uploaded_file is not None:
             st.markdown("💡 *Next Steps:* Follow the advice to treat your crops and prevent spread.")
         
         # Weather Integration
-        api_key = "YOUR_OPENWEATHER_API_KEY"  # Replace with your actual key
+        api_key = "Yd13e7d45edaf98c04a596864b3227d0d"  # Replace with your actual key
         city = "London"  # Change to e.g., "Delhi" for relevance
         try:
             response = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric")
