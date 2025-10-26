@@ -1,3 +1,4 @@
+
 import sys
 sys.path.insert(0,'.')
 import streamlit as st
@@ -51,30 +52,25 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Header
 st.title("🌾 AgriAI: Crop Disease Detector")
-#  Box-style Header
-#st.markdown('<div class="title-box"><h1>🌾 AgriAI - Smart Crop Disease Detector</h1></div>', unsafe_allow_html=True)
-
 st.markdown("### Empowering Farmers with Artificial Intelligence for a Healthier Harvest 🌿")
 st.markdown("Upload a clear crop photo, and let AgriAI detect diseases, suggest treatments, and provide prevention tips in seconds! 🚜")
 st.write("---")
-#  Sidebar Tips
+
+# Sidebar Tips
 st.sidebar.title("🌱 AgriAI Tips")
-st.sidebar.markdown("*☘ For Best Results:*")
+st.sidebar.markdown("☘ For Best Results:")
 st.sidebar.markdown("- Upload clear, well-lit photos of crops.")
 st.sidebar.markdown("- Focus on diseased leaves or fruits.")
 st.sidebar.markdown("- Check weather alerts for prevention.")
 st.sidebar.markdown("---")
-st.sidebar.markdown("*☘ ABOUT:* AI-powered tool for farmers to detect diseases quickly.")
+st.sidebar.markdown("☘ ABOUT: AI-powered tool for farmers to detect diseases quickly.")
 
-
-
-
-
-#  File Upload Section
+# File Upload Section
 uploaded_file = st.file_uploader("📸 Upload your crop image (JPG/PNG)...", type=["jpg", "jpeg", "png"])
 
-#  Prediction and Recommendations
+# Prediction and Recommendations
 if uploaded_file is not None:
     col1, col2 = st.columns([1, 1])
 
@@ -85,38 +81,58 @@ if uploaded_file is not None:
         with st.spinner("🔍 Analyzing your crop... please wait..."):
             advice = predict_disease(uploaded_file)
 
-        #  Disease-based Recommendations
+        # Disease-based Recommendations
         recommendations = {
             "Healthy": {
-                "Treatment": "No treatment required — your plant looks healthy! 🌱",
-                "Prevention": "Maintain good sunlight and regular watering.",
-                "Organic Tip": "Spray neem oil biweekly to keep leaves pest-free."
+                "Treatment": "Your plant looks healthy! Maintain regular sunlight, proper watering, and good soil nutrition.",
+                "Prevention": "Keep monitoring for early signs of pests or nutrient deficiencies. Use organic compost and neem oil periodically.",
+                "Organic Tip": "Spray neem oil biweekly to prevent pests naturally."
+            },
+            "Tomato___Early_blight": {
+                "Treatment": "Detected Tomato Early Blight. Remove affected leaves immediately and apply mancozeb fungicide.",
+                "Prevention": "Avoid overhead watering, rotate crops yearly, and maintain good ventilation.",
+                "Organic Tip": "Use compost tea or garlic spray weekly to strengthen plant immunity."
             },
             "Tomato___Late_blight": {
-                "Treatment": "Remove affected leaves and apply copper fungicide.",
-                "Prevention": "Avoid overhead watering and ensure ventilation.",
-                "Organic Tip": "Spray neem oil + baking soda solution weekly."
+                "Treatment": "Detected Tomato Late Blight. Prune infected leaves and apply copper fungicide promptly.",
+                "Prevention": "Water at soil level, avoid overcrowding, and ensure proper airflow.",
+                "Organic Tip": "Spray neem oil + baking soda solution weekly to reduce infection risk."
             },
             "Potato___Early_blight": {
-                "Treatment": "Use mancozeb fungicide early on and prune damaged leaves.",
-                "Prevention": "Water at soil level and rotate crops yearly.",
-                "Organic Tip": "Compost tea and garlic spray are effective naturally."
+                "Treatment": "Detected Potato Early Blight. Prune damaged leaves and apply appropriate fungicide.",
+                "Prevention": "Practice crop rotation and water at soil level only.",
+                "Organic Tip": "Compost tea or garlic spray can help prevent fungal infections naturally."
             },
-            "Apple___Scab": {
-                "Treatment": "Use sulfur-based fungicide and prune diseased twigs.",
-                "Prevention": "Clear fallen leaves; improve air circulation.",
-                "Organic Tip": "Apply lime-sulfur spray during dormant stage."
+            "Potato___Late_blight": {
+                "Treatment": "Detected Potato Late Blight. Remove infected parts and apply fungicide immediately.",
+                "Prevention": "Avoid overhead watering and maintain proper ventilation.",
+                "Organic Tip": "Neem oil applications weekly help reduce spread."
             },
-            "Corn___Common_rust": {
-                "Treatment": "Apply foliar fungicide; remove heavily infected leaves.",
-                "Prevention": "Grow rust-resistant varieties and irrigate carefully.",
-                "Organic Tip": "Use milk-water spray (1:10 ratio) twice a week."
+            "Tomato___Virus": {
+                "Treatment": "Detected Tomato Virus. Remove infected plants to prevent spread.",
+                "Prevention": "Use virus-resistant varieties and control insect vectors like whiteflies.",
+                "Organic Tip": "Maintain clean tools and healthy soil to reduce susceptibility."
+            },
+            "Potato___Virus": {
+                "Treatment": "Detected Potato Virus. Destroy infected plants and clean surrounding soil.",
+                "Prevention": "Use certified seed potatoes and control aphid populations.",
+                "Organic Tip": "Regularly apply organic mulch to improve soil health."
+            },
+            "Spot": {
+                "Treatment": "Detected leaf spots. Prune affected areas and apply fungicide if necessary.",
+                "Prevention": "Avoid wetting leaves during irrigation and provide proper spacing.",
+                "Organic Tip": "Neem oil spray or baking soda solution helps control spot infections."
+            },
+            "Other": {
+                "Treatment": "Your crop may have an uncommon issue. Monitor closely and consult an expert if it persists.",
+                "Prevention": "Maintain good hygiene, proper watering, and soil nutrition.",
+                "Organic Tip": "Use natural sprays like neem oil or garlic solution periodically."
             }
         }
 
         st.success(f"✅ AI Diagnosis: {advice}")
 
-        #  Match recommendation to disease
+        # Match recommendation to disease
         disease = None
         for key in recommendations.keys():
             if key.lower() in advice.lower():
@@ -127,16 +143,14 @@ if uploaded_file is not None:
             rec = recommendations[disease]
             st.markdown("### 🌿 Recommendations Based on Result")
             st.markdown(f"""
-            <div class="recommend-box">
-            <b>Treatment:</b> {rec['Treatment']}<br>
-            <b>Prevention:</b> {rec['Prevention']}<br>
-            <b>Organic Tip:</b> {rec['Organic Tip']}
-            </div>
-            """, unsafe_allow_html=True)
+                            *Treatment:* {rec['Treatment']}  
+                             *Prevention:* {rec['Prevention']}  
+                             *Organic Tip:* {rec['Organic Tip']}
+                             """)
         else:
             st.info("🌱 Monitor your crops regularly for early signs of infection.")
 
-        #  Farmer Health Tracker
+        # Farmer Health Tracker
         st.markdown("### 📊 Recent Diagnoses Tracker")
         if 'history' not in st.session_state:
             st.session_state.history = []
@@ -144,7 +158,7 @@ if uploaded_file is not None:
         for i, item in enumerate(st.session_state.history[-5:], 1):  # Show last 5
             st.write(f"{i}. {item}")
 
-        #  Weather Alert
+        # Weather Alert
         api_key = "d13e7d45edaf98c04a596864b3227d0d"  # Replace with your API key
         city = "Bengaluru"
         try:
@@ -160,7 +174,7 @@ if uploaded_file is not None:
 
 st.write("---")
 
-#  Do's and  Don’ts Section
+# Do's and Don’ts Section
 st.subheader("✅ Do’s and ❌ Don’ts for Sustainable Farming")
 col1, col2 = st.columns(2)
 with col1:
@@ -186,7 +200,7 @@ with col2:
 
 st.write("---")
 
-#  Footer
+# Footer
 st.markdown("""
 <div style='text-align:center; font-size:20px; font-weight:bold; color:#2e7d32; margin-top:30px;'>
 🌾 Together, let's help farmers achieve a greener and healthier future 🌿
