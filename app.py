@@ -1,9 +1,8 @@
 import sys
 sys.path.insert(0,'.')
-
-import streamlit as st  
-from model import predict_disease   
-import requests   
+import streamlit as st # type: ignore
+from model import predict_disease # type: ignore
+import requests # type: ignore
 import os
 
 # Custom CSS for a beautiful, agri-themed UI
@@ -60,7 +59,7 @@ if uploaded_file is not None:
             st.markdown("💡 *Next Steps:* Follow the advice to treat your crops and prevent spread.")
         
         # Weather Integration
-        api_key = "Yd13e7d45edaf98c04a596864b3227d0d"  # Replace with your actual key
+        api_key = "d13e7d45edaf98c04a596864b3227d0d"  # Replace with your actual key
         city = "London"  # Change to e.g., "Delhi" for relevance
         try:
             response = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric")
