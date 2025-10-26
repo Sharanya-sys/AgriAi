@@ -9,7 +9,7 @@ from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.optimizers import Adam # type: ignore
 
 #  Dataset Path 
-dataset_path = r"C:\Users\shara\Downloads\archive\PlantVillage" #  update to your dataset path
+dataset_path = r"C:\Users\shara\OneDrive\Documents\PlantVillage\plantpic_kaggle.zip" #  update to your dataset path
 model_file = "plant_model.h5"
 
 #  Load / Train Model 
