@@ -7,6 +7,9 @@ from tensorflow.keras.models import Sequential, load_model # type: ignore
 from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.optimizers import Adam # type: ignore
+from PIL import Image
+img = Image.open(uploaded_file)
+advice = predict_disease(img)
 
 #  Dataset Path 
 
