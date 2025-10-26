@@ -22,7 +22,7 @@ else:
     # Load images
     train_gen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
     train_data = train_gen.flow_from_directory(
-        "C:/Users/shara/OneDrive/Documents/PlantVillage/plantpic_kaggle"
+        "C:/Users/shara/OneDrive/Documents/PlantVillage/plantpic_kaggle",
         target_size=(224, 224),
         batch_size=32,
         class_mode='categorical',
