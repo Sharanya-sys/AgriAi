@@ -8,11 +8,11 @@ from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.optimizers import Adam # type: ignore
 
-# ====== Dataset Path ======
-dataset_path = r"C:\Users\shara\Downloads\archive\PlantVillage" # <-- update to your dataset path
+#  Dataset Path 
+dataset_path = r"C:\Users\shara\Downloads\archive\PlantVillage" #  update to your dataset path
 model_file = "plant_model.h5"
 
-# ====== Load / Train Model ======
+#  Load / Train Model 
 if os.path.exists(model_file):
     model = load_model(model_file)
 else:
@@ -46,10 +46,10 @@ else:
     class_names = {v:k for k,v in train_data.class_indices.items()}
     np.save("class_names.npy", class_names)
 
-# ====== Load class mapping ======
+#  Load class mapping 
 class_names = np.load("class_names.npy", allow_pickle=True).item()
 
-# ====== Prediction Function ======
+#  Prediction Function 
 def predict_disease(img_path):
     try:
         img = image.load_img(img_path, target_size=(224,224))
