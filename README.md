@@ -17,6 +17,37 @@ Steps:
      env\Scripts\activate```
 
 4. Install required libraries
-
-   ``` pip install tensorflow keras numpy opencv-python pillow streamlit spicy```
+   Run this in terminal
    
+   ```bash
+   
+    pip install tensorflow keras numpy opencv-python pillow streamlit spicy ```
+
+   
+
+6. Download dataset for plant leaf images.
+   * Go to Kaggle- Plantvillage or any source
+   * download it and unzip
+   * Move the images into separate folder(plantpic_kaggle).
+
+7. Train the model
+    In terminal run:
+   
+    ```bash
+     python module.py```
+   This will train the model and save models/plant_disease_model.h5.
+
+7. Run the web app
+    To open the app..
+   
+   ```bash
+
+   streamlit run app.py
+
+   A browser window will open. Upload a leaf image and see prediction.
+
+Weather API key setup:
+
+ 1. Go to OpenWeatherMap.
+ 2. Sign up and copy your API key.
+
