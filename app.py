@@ -220,7 +220,7 @@ if uploaded_file is not None:
             st.write(f"{i}. {item}")
 
         # Weather Alert
-        api_key = "d13e7d45edaf98c04a596864b3227d0d"  # Replace with your API key
+        api_key = "API_KEY"  # Replace with your API key
         city = "Bengaluru"
         try:
             response = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric")
