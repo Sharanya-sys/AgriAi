@@ -1,10 +1,11 @@
 **# AgriAi**
+
 A Streamlit web app using TensorFlow to detect crop diseases from photos, provide treatment advice, and integrate weather alerts for farmers. Built with Python—scalable for agriculture.
 
 __STEPS:__
 
-1. __Install Python__
-    from python.org
+1. __Install Python__  from python.org
+2. 
    (Python 3.11 preffered)
 
 2.**Create project folder 'AgriAi_Project'**
