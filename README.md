@@ -3,7 +3,7 @@ A Streamlit web app using TensorFlow to detect crop diseases from photos, provid
 
 __STEPS:__
 
-1. ** Install Python **from python.org
+1. __ Install Python __ from python.org
    (Python 3.11 preffered)
 
 2.** Create project folder **'AgriAi_Project'
