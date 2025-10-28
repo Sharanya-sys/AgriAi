@@ -12,10 +12,11 @@ Steps:
 3. Make and active virtual environment
     Open terminal/ command prompt inside the project folder.
 
-     '''bash
+     ```bash
      python -m venv env
-     env\Scripts\activate'''
+     env\Scripts\activate```
 
 4. Install required libraries
 
-    pip install tensorflow keras numpy opencv-python pillow streamlit 
+   ``` pip install tensorflow keras numpy opencv-python pillow streamlit spicy```
+   
