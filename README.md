@@ -14,14 +14,16 @@ Steps:
 
      ```bash
      python -m venv env
-     env\Scripts\activate```
+     env\Scripts\activate
+     ```
 
 4. Install required libraries
    Run this in terminal
    
    ```bash
    
-    pip install tensorflow keras numpy opencv-python pillow streamlit spicy ```
+    pip install tensorflow keras numpy opencv-python pillow streamlit spicy
+    ```
 
    
 
@@ -34,7 +36,8 @@ Steps:
     In terminal run:
    
     ```bash
-     python module.py```
+     python module.py
+    ```
    This will train the model and save models/plant_disease_model.h5.
 
 7. Run the web app
@@ -43,6 +46,7 @@ Steps:
    ```bash
 
    streamlit run app.py
+   ```
 
    A browser window will open. Upload a leaf image and see prediction.
 
