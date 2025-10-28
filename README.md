@@ -13,11 +13,11 @@ __STEPS:__
 3.**Make and active virtual environment**
     Open terminal/ command prompt inside the project folder.
 
-    ``` bash
+``` bash
      
       python -m venv env
       env\Scripts\activate
-         ```
+  ```
 
 4. **Install required libraries**
    Run this in terminal
@@ -37,10 +37,9 @@ __STEPS:__
 7.**Train the model**
     In terminal run:
    
-    ```bash
-    
-       python module.py
-       ```
+``` bash
+  python module.py
+```
        
    This will train the model and save models/plant_disease_model.h5.
 
