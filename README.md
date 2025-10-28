@@ -14,7 +14,7 @@ Steps:
 
      '''bash
      python -m venv env
-     env\Scripts\activate
+     env\Scripts\activate'''
 
 4. Install required libraries
 
