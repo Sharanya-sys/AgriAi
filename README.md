@@ -61,7 +61,4 @@ __STEPS:__
  3. Add this key to code in app.py.
 
 
-![Screenshot]("C:\Users\shara\OneDrive\Pictures\Screenshots\Screenshot 2025-10-28 222615.png")
 
-
-![Screenshot]("C:\Users\shara\OneDrive\Pictures\Screenshots\Screenshot 2025-10-28 222742.png")
