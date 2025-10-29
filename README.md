@@ -59,3 +59,9 @@ __STEPS:__
  1. Go to OpenWeatherMap.
  2. Sign up and copy your API key.
  3. Add this key to code in app.py.
+
+
+![Screenshot]("C:\Users\shara\OneDrive\Pictures\Screenshots\Screenshot 2025-10-28 222615.png")
+
+
+![Screenshot]("C:\Users\shara\OneDrive\Pictures\Screenshots\Screenshot 2025-10-28 222742.png")
